@@ -1,0 +1,1 @@
+Simplistic sample showing the use of MVI
