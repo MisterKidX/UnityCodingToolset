@@ -53,7 +53,7 @@ public abstract class Instance<TModel, TInstance> : ScriptableObject, IInstance<
     static int _editorId = 0;
     string _path;
 #endif
-    public virtual void Initialize()
+    protected virtual void Initialize()
     {
 #if UNITY_EDITOR
         if (AssetDatabase.IsValidFolder("Assets/_MVI_GameState") == false)
