@@ -32,18 +32,21 @@ public abstract class Instance<TModel, TInstance> : ScriptableObject, IInstance<
         return so;
     }
 
-    public void Destroy()
+    public void Dispose(bool destroyViews = true)
     {
-#if UNITY_EDITOR
-        AssetDatabase.DeleteAsset(_path);
-#endif
-
-        foreach (var view in Views)
+        if (destroyViews)
         {
-            Destroy(view.gameObject);
+            foreach (var view in Views)
+            {
+                Destroy(view.gameObject);
+            }
         }
 
+#if UNITY_EDITOR
+        AssetDatabase.DeleteAsset(_path);
+#else
         DestroyImmediate(this);
+#endif
     }
 
 #if UNITY_EDITOR
@@ -60,16 +63,4 @@ public abstract class Instance<TModel, TInstance> : ScriptableObject, IInstance<
         AssetDatabase.CreateAsset(this, _path);
 #endif
     }
-
-#if UNITY_EDITOR
-    private void OnDisable()
-    {
-        string[] gameState = { "Assets/_MVI_GameState" };
-        foreach (var asset in AssetDatabase.FindAssets("", gameState))
-        {
-            var path = AssetDatabase.GUIDToAssetPath(asset);
-            AssetDatabase.DeleteAsset(path);
-        }
-    }
-#endif
 }
