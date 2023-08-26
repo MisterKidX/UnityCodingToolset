@@ -24,6 +24,11 @@
       "displayName": "Scene Picker Demo",
       "description": "Shows how to use the scene picker attribute.",
       "path": "Samples~/ScenePickerDemo"
+    },
+    {
+      "displayName": "Shaders Demo",
+      "description": "Shows the usability of different shaders.",
+      "path": "Samples~/ShadersDemo"
     }
 ],
     "author": {
