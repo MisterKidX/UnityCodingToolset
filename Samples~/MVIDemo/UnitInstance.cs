@@ -1,23 +1,24 @@
 ﻿using System;
-using UnityEditor;
-using UnityEngine;
 
-public class UnitInstance : Instance<UnitModel, UnitInstance>
+namespace DBD.MVI.Demo
 {
-    public float NormalizedHP => (float)CurrentHp / Model.MaxHp;
-
-    private int _currentHp;
-    public int CurrentHp
+    public class UnitInstance : Instance<UnitModel, UnitInstance>
     {
-        get => _currentHp; set
+        public float NormalizedHP => (float)CurrentHp / Model.MaxHp;
+
+        private int _currentHp;
+        public int CurrentHp
         {
-            _currentHp = Math.Max(value, 0);
+            get => _currentHp; set
+            {
+                _currentHp = Math.Max(value, 0);
+            }
         }
-    }
 
-    protected override void Initialize()
-    {
-        base.Initialize();
-        CurrentHp = Model.MaxHp;
+        protected override void Initialize()
+        {
+            base.Initialize();
+            CurrentHp = Model.MaxHp;
+        }
     }
 }

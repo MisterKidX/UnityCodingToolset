@@ -1,8 +1,13 @@
 ﻿using UnityEngine;
+using DBD.MVI;
 
-[CreateAssetMenu(menuName ="Unit")]
-public class UnitModel : Model
+namespace DBD.MVI.Demo
 {
-    public int MaxHp;
-    public int Damage;
+    [CreateAssetMenu(menuName = "Unit")]
+    public class UnitModel : Model
+    {
+        public int MaxHp;
+        public int Damage;
+    }
+
 }
