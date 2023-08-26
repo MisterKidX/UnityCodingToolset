@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DBD.UnityCodingTools
+namespace DBD.Events
 {
     public class EventMediator
     {

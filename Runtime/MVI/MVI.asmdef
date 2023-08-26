@@ -1,6 +1,6 @@
 {
-    "name": "com.dorbendor.unity-coding-toolset",
-    "rootNamespace": "DBD.UnityCodingTools",
+    "name": "MVI",
+    "rootNamespace": "DBD.MVI",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
