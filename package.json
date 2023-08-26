@@ -16,14 +16,14 @@
 "license" : "CC",
 "samples": [
     {
-      "displayName": "Custom Sample 0",
-      "description": "Description 0.",
-      "path": "Samples~/CustomSample0"
+      "displayName": "MVI Demo",
+      "description": "Shows the usability of the Model View Instance pattern.",
+      "path": "Samples~/MVIDemo"
     },
     {
-      "displayName": "Custom Sample 1",
-      "description": "Description 1.",
-      "path": "Samples~/CustomSample1"
+      "displayName": "Scene Picker Demo",
+      "description": "Shows how to use the scene picker attribute.",
+      "path": "Samples~/ScenePickerDemo"
     }
 ],
     "author": {
