@@ -1,9 +1,12 @@
 {
     "name": "com.dorbendor.unity-coding-toolset.Editor",
+    "rootNamespace": "",
     "references": [
         "GUID:d0b46c234ccd36e4e871020e4c0c485a"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
